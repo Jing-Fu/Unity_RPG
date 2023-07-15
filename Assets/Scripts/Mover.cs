@@ -6,8 +6,6 @@ using UnityEngine.AI;
 
 public class Mover : MonoBehaviour
 {
-    [SerializeField]
-    public Transform target;
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
