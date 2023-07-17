@@ -811,14 +811,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6186644203717424723, guid: a6c71b7fa2466ec448f8df0ce5f0e3ce, type: 3}
-      propertyPath: m_StoppingDistance
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6186644203717424731, guid: a6c71b7fa2466ec448f8df0ce5f0e3ce, type: 3}
-      propertyPath: weaponRange
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6186644205187739127, guid: a6c71b7fa2466ec448f8df0ce5f0e3ce, type: 3}
       propertyPath: m_Name
       value: Player
