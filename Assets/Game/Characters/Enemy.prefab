@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6186644203717424723, guid: a6c71b7fa2466ec448f8df0ce5f0e3ce, type: 3}
+      propertyPath: m_Speed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6186644205187739127, guid: a6c71b7fa2466ec448f8df0ce5f0e3ce, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -57,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6875994637218757175, guid: a6c71b7fa2466ec448f8df0ce5f0e3ce, type: 3}
       propertyPath: health
-      value: 20
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6c71b7fa2466ec448f8df0ce5f0e3ce, type: 3}
@@ -80,6 +84,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &240120420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5035454580418107297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8a23f3d0f6baaa4f8a02a213046af3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseDistance: 5
 --- !u!114 &1652420776
 MonoBehaviour:
   m_ObjectHideFlags: 0
