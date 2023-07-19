@@ -64,6 +64,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 101202525010120176, guid: a6c71b7fa2466ec448f8df0ce5f0e3ce, type: 3}
+      propertyPath: weaponDamage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6186644205187739127, guid: a6c71b7fa2466ec448f8df0ce5f0e3ce, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -112,6 +116,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6875994637218757175, guid: a6c71b7fa2466ec448f8df0ce5f0e3ce, type: 3}
+      propertyPath: health
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6c71b7fa2466ec448f8df0ce5f0e3ce, type: 3}
 --- !u!1 &5035454580418107297 stripped
@@ -133,6 +141,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseDistance: 5
   suspensionTime: 5
+  patrolPath: {fileID: 0}
+  waypointTolerance: 1
+  waypointDwellTime: 3
 --- !u!4 &5035454580418107309 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6186644205187739131, guid: a6c71b7fa2466ec448f8df0ce5f0e3ce, type: 3}
