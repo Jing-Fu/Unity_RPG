@@ -3,18 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using RPG.Saving;
+using Newtonsoft.Json.Linq;
 
 namespace RPG.Core
 {
-    public class Health : MonoBehaviour, ISaveable
+    public class Health : MonoBehaviour, IJsonSaveable
     {
         [SerializeField] float health = 100f;
         bool isDead = false;
         public bool IsDead { get => isDead; }
-
-        public object CaptureState()
+        public JToken CaptureAsJToken()
         {
-            return health;
+            return JToken.FromObject(health);
+        }
+
+        public void RestoreFromJToken(JToken state)
+        {
+            health = state.ToObject<float>();
+            //UpdateState();
         }
 
         public void RestoreState(object state)
