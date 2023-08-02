@@ -12,9 +12,25 @@ PrefabInstance:
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 101202525010120176, guid: a6c71b7fa2466ec448f8df0ce5f0e3ce, type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: ad87b69edb87c44469a6eb8830e9815a, type: 2}
+    - target: {fileID: 101202525010120176, guid: a6c71b7fa2466ec448f8df0ce5f0e3ce, type: 3}
       propertyPath: weaponDamage
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 101202525010120176, guid: a6c71b7fa2466ec448f8df0ce5f0e3ce, type: 3}
+      propertyPath: weaponPrefab
+      value: 
+      objectReference: {fileID: 8755918387117449139, guid: 5321881b1b76ec14e962e02d011744b3, type: 3}
+    - target: {fileID: 101202525010120176, guid: a6c71b7fa2466ec448f8df0ce5f0e3ce, type: 3}
+      propertyPath: handTransform
+      value: 
+      objectReference: {fileID: 799780026675890942}
+    - target: {fileID: 101202525010120176, guid: a6c71b7fa2466ec448f8df0ce5f0e3ce, type: 3}
+      propertyPath: weaponOverride
+      value: 
+      objectReference: {fileID: 22100000, guid: 0b72e0e886cddf949b48fae48a943314, type: 2}
     - target: {fileID: 289205941512515429, guid: a6c71b7fa2466ec448f8df0ce5f0e3ce, type: 3}
       propertyPath: uniqueIdentifier
       value: Player
@@ -114,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6741904831726845449}
     m_Modifications:
+    - target: {fileID: 162502, guid: 679ff741e12a7e740819ede24a7000b7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 191330, guid: 679ff741e12a7e740819ede24a7000b7, type: 3}
       propertyPath: m_Name
       value: Character_Knights_Soldier_02
@@ -168,3 +188,8 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 3f6fc0cf5e5d31c458bc74ede87cb8ae, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 679ff741e12a7e740819ede24a7000b7, type: 3}
+--- !u!4 &799780026675890942 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 461188, guid: 679ff741e12a7e740819ede24a7000b7, type: 3}
+  m_PrefabInstance: {fileID: 799780026676347770}
+  m_PrefabAsset: {fileID: 0}
