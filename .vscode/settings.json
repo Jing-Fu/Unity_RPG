@@ -53,5 +53,6 @@
     },
     "cSpell.words": [
         "scipts"
-    ]
+    ],
+    "dotnet.defaultSolution": "Unity_RPG.sln"
 }
