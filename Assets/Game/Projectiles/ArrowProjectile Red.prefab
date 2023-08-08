@@ -55,6 +55,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6978981809351426100, guid: fc43c05dd2b01de4d82a249c1e721852, type: 3}
+      propertyPath: hitEffect
+      value: 
+      objectReference: {fileID: 6332447644018318756, guid: 11a1bbefa87c1de41b1245a722a3f017, type: 3}
+    - target: {fileID: 6978981809351426100, guid: fc43c05dd2b01de4d82a249c1e721852, type: 3}
+      propertyPath: isHooming
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7028289453067463234, guid: fc43c05dd2b01de4d82a249c1e721852, type: 3}
       propertyPath: m_Parameters.colorGradient.atime1
       value: 1542

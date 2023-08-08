@@ -48,6 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  isHooming: 1
+  hitEffect: {fileID: 0}
 --- !u!65 &1859199582383519924
 BoxCollider:
   m_ObjectHideFlags: 0

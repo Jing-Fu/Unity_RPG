@@ -8,13 +8,24 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] float speed = 1;
+    [SerializeField] bool isHooming = true;
+    [SerializeField] GameObject hitEffect = null;
     Health target = null;
     float damage = 0;
+
+    void Start()
+    {
+        transform.LookAt(GetAimLocation());
+    }
     void Update()
     {
         if (target == null) return;
-        transform.LookAt(GetAimLocation());
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+
+        if (isHooming && !target.IsDead)
+        {
+            transform.LookAt(GetAimLocation());
+        }
+        transform.Translate(speed * Time.deltaTime * Vector3.forward);
     }
 
     public void SetTarget(Health target, float damage)
@@ -36,7 +47,12 @@ public class Projectile : MonoBehaviour
         {
             return;
         }
+        if (target.IsDead) return;
         target.TakeDamage(damage);
+        if (hitEffect != null)
+        {
+            Instantiate(hitEffect, GetAimLocation(), transform.rotation);
+        }
         Destroy(gameObject);
     }
 
