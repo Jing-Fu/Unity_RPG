@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 1652420776}
   - component: {fileID: 289205941512515429}
   - component: {fileID: 2344966163620023534}
+  - component: {fileID: -5093752730378824088}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -178,7 +179,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenAttacks: 1
-  handTransform: {fileID: 0}
+  rightHandTransform: {fileID: 0}
+  leftHandTransform: {fileID: 0}
   defaultWeapon: {fileID: 0}
 --- !u!136 &1652420777
 CapsuleCollider:
@@ -235,3 +237,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-5093752730378824088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6186644205187739127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614b64229b7b1644abf7d5ecc9ae4de0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingLevel: 1
+  characterClass: 1
+  progression: {fileID: 11400000, guid: af6f60fe0fefcef4ab486af20a8d3f46, type: 2}

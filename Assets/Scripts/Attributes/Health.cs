@@ -1,32 +1,36 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using RPG.Saving;
 using Newtonsoft.Json.Linq;
+using RPG.Stats;
+using RPG.Core;
 
-namespace RPG.Core
+namespace RPG.Attributes
 {
     public class Health : MonoBehaviour, IJsonSaveable
     {
-        [SerializeField] float health = 100f;
+        [SerializeField] float healthPoint = 100f;
         bool isDead = false;
+        void Start()
+        {
+            healthPoint = GetComponent<BaseStats>().GetHealth();
+        }
+
         public bool IsDead { get => isDead; }
         public JToken CaptureAsJToken()
         {
-            return JToken.FromObject(health);
+            return JToken.FromObject(healthPoint);
         }
 
         public void RestoreFromJToken(JToken state)
         {
-            health = state.ToObject<float>();
+            healthPoint = state.ToObject<float>();
             //UpdateState();
         }
 
         public void RestoreState(object state)
         {
-            health = (float)state;
-            if (health == 0)
+            healthPoint = (float)state;
+            if (healthPoint == 0)
             {
                 Die();
             }
@@ -34,11 +38,16 @@ namespace RPG.Core
 
         public void TakeDamage(float damage)
         {
-            health = Mathf.Max(health - damage, 0);
-            if (health == 0)
+            healthPoint = Mathf.Max(healthPoint - damage, 0);
+            if (healthPoint == 0)
             {
                 Die();
             }
+        }
+
+        public float GetPercentage()
+        {
+            return 100 * (healthPoint / GetComponent<BaseStats>().GetHealth());
         }
 
         private void Die()

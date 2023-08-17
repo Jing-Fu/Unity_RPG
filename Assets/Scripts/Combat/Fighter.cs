@@ -1,9 +1,9 @@
 using UnityEngine;
 using RPG.Movement;
 using RPG.Core;
-using System;
 using RPG.Saving;
 using Newtonsoft.Json.Linq;
+using RPG.Attributes;
 
 namespace RPG.Combat
 {
@@ -26,13 +26,6 @@ namespace RPG.Combat
             }
         }
 
-        public void EquipWeapon(Weapon weapon)
-        {
-            currentWeapon = weapon;
-            Animator animator = GetComponent<Animator>();
-            weapon.Spawn(rightHandTransform, leftHandTransform, animator);
-        }
-
         private void Update()
         {
             timeSinceLastAttack += Time.deltaTime;
@@ -49,6 +42,18 @@ namespace RPG.Combat
                 GetComponent<Mover>().Cancel();
                 AttackBehaviour();
             }
+        }
+
+        public void EquipWeapon(Weapon weapon)
+        {
+            currentWeapon = weapon;
+            Animator animator = GetComponent<Animator>();
+            weapon.Spawn(rightHandTransform, leftHandTransform, animator);
+        }
+
+        public Health GetTarget()
+        {
+            return target;
         }
 
         private void AttackBehaviour()
