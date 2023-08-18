@@ -54,5 +54,7 @@
     "cSpell.words": [
         "scipts"
     ],
-    "dotnet.defaultSolution": "Unity_RPG.sln"
+    "dotnet.defaultSolution": "Unity_RPG.sln",
+    "dotnet.backgroundAnalysis.analyzerDiagnosticsScope": "fullSolution",
+    "dotnet.backgroundAnalysis.compilerDiagnosticsScope": "fullSolution"
 }

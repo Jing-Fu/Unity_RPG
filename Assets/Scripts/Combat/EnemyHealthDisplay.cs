@@ -21,6 +21,7 @@ namespace RPG.Attributes
             if (fighter.GetTarget() == null)
             {
                 GetComponent<TextMeshProUGUI>().text = "N/A";
+                return;
             }
             Health health = fighter.GetTarget().GetComponent<Health>();
             GetComponent<TextMeshProUGUI>().text = string.Format("{0:0.0}%", health.GetPercentage());

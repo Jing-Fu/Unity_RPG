@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using RPG.Saving;
 using Newtonsoft.Json.Linq;
@@ -36,13 +37,22 @@ namespace RPG.Attributes
             }
         }
 
-        public void TakeDamage(float damage)
+        public void TakeDamage(GameObject instigator, float damage)
         {
             healthPoint = Mathf.Max(healthPoint - damage, 0);
             if (healthPoint == 0)
             {
                 Die();
+                AwardExperience(instigator);
             }
+        }
+
+        private void AwardExperience(GameObject instigator)
+        {
+            Experience experience = instigator.GetComponent<Experience>();
+            if (experience == null) return;
+
+            experience.GainExperience(GetComponent<BaseStats>().GetExperienceReward());
         }
 
         public float GetPercentage()
