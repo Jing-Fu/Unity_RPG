@@ -26,7 +26,7 @@ namespace RPG.Attributes
 
         private void RegenerateHealth()
         {
-            float regenerationHealthPoints = GetComponent<BaseStats>().GetStat(Stat.Health) * regenerationPercentage;
+            float regenerationHealthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
             healthPoint = Mathf.Max(healthPoint, regenerationHealthPoints);
         }
 
@@ -46,12 +46,24 @@ namespace RPG.Attributes
 
         public void TakeDamage(GameObject instigator, float damage)
         {
+            print(gameObject.name + "took damage" + damage);
             healthPoint = Mathf.Max(healthPoint - damage, 0);
             if (healthPoint == 0)
             {
                 Die();
                 AwardExperience(instigator);
             }
+        }
+
+        public float GetHealthPoints()
+        {
+            Debug.Log($"healthPoint:{healthPoint}");
+            return healthPoint;
+        }
+
+        public float GetMaxHealthPoint()
+        {
+            return GetComponent<BaseStats>().GetStat(Stat.Health);
         }
 
         private void AwardExperience(GameObject instigator)
